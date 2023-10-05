@@ -11,6 +11,10 @@
     --color2: #9debf1;
 }
 
+::selection{
+    background-color: #455b9d;
+}
+
 body{
     font-family: Nunito, sans-serif;
     display: flex;
