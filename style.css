@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --color: #2980b9;
+    --color2: #9debf1;
+}
+
 body{
     font-family: Nunito, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(330deg,
+        var(--color) 10%,
+        var(--color2) 80%);
+    font-size: 20px;
 }
