@@ -6,6 +6,11 @@ let mainText = document.querySelector('.main')
 let demo = document.querySelector('.result')
 let flag = true
 
+resetBtn.addEventListener('click', () => {
+    userInput.value = ''
+    demo.innerHTML = ''
+})
+
 convertorBtn.addEventListener('click',  () => {
     Number(userInput.value)
     if (flag == true) {
