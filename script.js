@@ -46,3 +46,27 @@ changeBtn.addEventListener('click', () => {
     demo.innerHTML = ''
     userInput.value = ''
 })
+
+// handeling when user enters in the input 
+
+userInput.addEventListener('keydown', (event) => {
+    if(event.keyCode === 13){
+        if (flag == true) {
+
+            //* C to F
+    
+            let C = userInput.value;
+            let result = ((C * 1.8) + 32).toFixed(2)
+            demo.innerHTML = `${C}℃ is equal to ${result} ℉`
+        }
+        else if (flag == false) {
+      
+            //* F to C
+    
+            let F = userInput.value;
+            let secondResult = ((F - 32) / 1.8).toFixed(2);
+            demo.innerHTML = `${F}℉ is equal to ${secondResult} ℃`
+        }
+        
+    }
+})
