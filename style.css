@@ -1,115 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --color: #2980b9;
-    --color2: #9debf1;
+  --color: #2980b9;
+  --color2: #9debf1;
 }
 
-::selection{
-    background-color: #455b9d;
+::selection {
+  background-color: #455b9d;
 }
 
-body{
-    font-family: Nunito, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    color: rgb(255, 255, 255);
-    background-image: linear-gradient(330deg,
-        var(--color) 10%,
-        var(--color2) 80%);
-    font-size: 20px;
+body {
+  font-family: Nunito, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    330deg,
+    var(--color) 10%,
+    var(--color2) 80%
+  );
+  font-size: 20px;
 }
 
 #converter {
-    margin: 50px 0 10px;
-    padding: 7px;
-    font-size: 20px;
-    border: none;
-    box-shadow: 3px 3px 10px var(--color);
-    transition: 0.3s ease;
-    border-radius: 20px;
-  }
-  
-  #converter:focus {
-    outline: 1px solid var(--color);
-    box-shadow: 3px 3px 30px var(--color);
-  
-  }
-  /* h1 tag in header */
-  .main{
-    display: block;
-    font-size: 1.8em;
-    margin-block: 0.67em;
+  margin: 50px 0 10px;
+  padding: 7px;
+  font-size: 20px;
+  border: none;
+  box-shadow: 3px 3px 10px var(--color);
+  transition: 0.3s ease;
+  border-radius: 20px;
+}
+
+#converter:focus {
+  outline: 1px solid var(--color);
+  box-shadow: 3px 3px 30px var(--color);
+}
+/* h1 tag in header */
+.main {
+  display: block;
+  font-size: 1.8em;
+  margin-block: 0.67em;
   text-shadow: 0px 0px 4px hsla(0, 0%, 7%, 0.3);
+}
+
+.result {
+  text-align: center;
+  margin: 10px 0 50px;
+  font-size: 26px;
+  color: rgb(255, 255, 102);
+  letter-spacing: 1px;
+  height: 1em;
+  font-weight: bold;
+}
+
+button {
+  width: 200px;
+  margin: 0 30px;
+  box-shadow: 3px 3px 10px var(--color);
+  color: #000;
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: var(--color);
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--color) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: var(--color);
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--color) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 100ms;
+}
+
+/* ------> Media queries <------ */
+@media screen and (max-width: 385px) {
+  /*Smartphones*/
+  .main {
+    font-size: 30px;
   }
-  
   .result {
-    text-align: center;
-    margin: 10px 0 50px;
-    font-size: 26px;
-    color: rgb(255, 255, 102);
-    letter-spacing: 1px;
-    height: 1em;
-    font-weight: bold;
+    font-size: 23px;
   }
-  
+}
+
+@media screen and (max-width: 1000px) {
+  /*Bigger screens*/
   button {
-    width: 200px;
-    margin: 0 30px;
-    box-shadow: 3px 3px 10px var(--color);
-    color: #000;
-    padding: 17px 40px;
-    border-radius: 50px;
-    border: 0;
-    background-color: white;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-size: 18px;
-    transition: all .5s ease;
-    cursor: pointer;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
   }
-  
-  button:hover {
-    letter-spacing: 3px;
-    background-color: var(--color);
-    color: hsl(0, 0%, 100%);
-    box-shadow: var(--color) 0px 7px 29px 0px;
-    }
-    
-    button:active {
-    letter-spacing: 3px;
-    background-color: var(--color);
-    color: hsl(0, 0%, 100%);
-    box-shadow: var(--color) 0px 0px 0px 0px;
-    transform: translateY(5px);
-    transition: 100ms;
-    }
-  
-  /* ------> Media queries <------ */
-  @media screen and (max-width: 385px) {
-    /*Smartphones*/
-    .main {
-      font-size: 30px;
-    }
-    .result{
-      font-size: 23px;
-    }
-  }
-  
-  @media screen and (max-width: 1000px) {
-    /*Bigger screens*/
-    button {
-      display: flex;
-      margin-bottom: 20px;
-      justify-content: center;
-    }
-  }
+}
